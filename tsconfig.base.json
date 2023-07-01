@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@push-stack/dev-portal": ["libs/dev-portal/src/index.ts"]
+      "@push-stack/dev-portal": ["libs/dev-portal/src/index.ts"],
+      "@push-stack/dev-portal/react": ["libs/dev-portal/src/lib/react/index.tsx"],
     }
   },
   "exclude": ["node_modules", "tmp"]

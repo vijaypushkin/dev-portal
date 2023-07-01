@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import DevPortalReact from '@push-stack/dev-portal/react';
 import styles from './app.module.scss';
 
 export function App() {
@@ -18,6 +19,7 @@ export function App() {
           <div>{randomNumber}</div>
         </div>
       </div>
+      <DevPortalReact />
     </main>
   );
 }
