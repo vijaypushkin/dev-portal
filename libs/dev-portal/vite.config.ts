@@ -39,7 +39,7 @@ export default defineConfig({
       fileName: 'index',
       // Change this to the formats you want to support.
       // Don't forget to update your package.json as well.
-      formats: ['es', 'cjs'],
+      formats: ['es', 'cjs', 'umd'],
     },
     rollupOptions: {
       // External packages that should not be bundled into your library.
@@ -52,7 +52,7 @@ export default defineConfig({
     cache: {
       dir: '../../node_modules/.vitest',
     },
-    environment: 'node',
+    environment: 'jsdom',
     include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
   },
 });
