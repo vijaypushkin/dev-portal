@@ -1,13 +1,24 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { useState } from 'react';
 import styles from './app.module.scss';
 
-import NxWelcome from './nx-welcome';
-
 export function App() {
+  const [randomNumber, setRandomNumber] = useState(0);
+  const handleGenerateRandomNumber = () => {
+    setRandomNumber((Math.random() * 100) | 0);
+  };
+
   return (
-    <div>
-      <NxWelcome title="example-react" />
-    </div>
+    <main className={styles.root}>
+      <div className={styles.item}>
+        <h1 className={styles.title}>String</h1>
+        <div className={styles.itemBody}>
+          <button onClick={handleGenerateRandomNumber}>
+            Generate Random Number
+          </button>
+          <div>{randomNumber}</div>
+        </div>
+      </div>
+    </main>
   );
 }
 
