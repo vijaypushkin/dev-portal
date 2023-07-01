@@ -1,1 +1,3 @@
-export * from './lib/dev-portal';
+export {
+devPortal
+} from './lib/dev-portal';
